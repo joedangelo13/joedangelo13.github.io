@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8" /> 
+<title>Canvas Tutorial</title> 
+</head> 
+<body> 
+<div> <canvas id="canvas" width="1000" height="340" style="background:rgb(233,233,233)"> If you see this text is because your browser do not support the canvas tag. </canvas> 
+</div> 
+<script type="text/javascript" src="JS/jquery-1.7.2.min.js"></script> 
+<script>
+var canvas;
+var ctx;
+var dx = 50;
+var x = 30;
+var y = 0;
+var WIDTH = 1000;
+var HEIGHT = 340;
+var tile1 = new Image ();
+var posicao = 0;
+var NUM_POSICOES = 10;
+
+function KeyDown(evt){ switch (evt.keyCode) { case 39: /* Arrow to the right */ if (x + dx < WIDTH){ x += dx; posicao++; if(posicao == NUM_POSICOES) posicao = 1; } break; } }
+function Draw() { tile1.src = posicao+"Images/coin.png"; ctx.drawImage(tile1, x, y); }
+
+function LimparTela() { ctx.fillStyle = "rgb(233,233,233)"; ctx.beginPath(); ctx.rect(0, 0, WIDTH, HEIGHT); ctx.closePath(); ctx.fill(); }
+function Update() {
+    LimparTela();    
+    Draw();
+}
+function Start() { canvas = document.getElementById("canvas"); ctx = canvas.getContext("2d"); return setInterval(Update, 100); }
+window.addEventListener('keydown', KeyDown);
+Start();
+</script>
+</body> 
+</html>
+

@@ -1,0 +1,82 @@
+<%@ Page Title="Menu" Language="VB" AutoEventWireup="false" Debug="true"%>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="Style/style.css">
+<title>AddPokemon</title>
+<script src="JS/jquery-1.11.1.min.js"></script>
+<script>
+function BrowseImages(){
+	
+	
+	
+}
+
+
+
+
+
+</script>
+</head>
+
+<body>
+<form id="form1" runat="server">
+<div id="container">
+<div id="divone" style="width:400px; position:absolute; z-index:2;">
+<h2 id="Number">Number</h2>
+<input type="text" id="NumberText" value="Input Number" align="middle" >
+<br>
+<h2 id="Name">Name</h2>
+<input type="text" id="NameText" value="Input Name" align="middle" >
+<br>
+<h2 id="Type1">Type 1</h2>
+<input type="text" id="Type1Text" value="Input Type 1" align="middle" >
+<br>
+<h2 id="Type2">Type 2</h2>
+<input type="text" id="Type2Text" value="Input Type 2" align="middle" >
+<br>
+<h2 id="Height">Height</h2>
+<input type="text" id="HeightText" value="Input Height" align="middle" >
+<br>
+<h2 id="Weight">Weight</h2>
+<input type="text" id="WeightText" value="Input Weight" align="middle" >
+<br>
+<h2 id="Description">Description</h2>
+<input type="text" id="DescriptionText" value="Input Description" style="height:200px; width:500px;" >
+</div>
+<div id="divtwo" style="margin-left:600px; position:absolute; z-index:5;">
+<img id="PokemonPicutre" src="" height="300px" width="300px">
+<input type="button" value="Add Image" onClick="BrowseImages()"/>
+<br>
+<input type="button" value="Submit to Pokedex" onClick="Submit()" style="width:300px; height:300px;"/>
+
+</div>
+<div id="data">
+ <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+    	ConnectionString="<%$ ConnectionStrings:SQLwww %>" 
+    	SelectCommand="select * from italian">
+    </asp:SqlDataSource>
+
+		<asp:GridView Font-Size="Small" class="GridView" ID="GridView1" runat="server" DataSourceID="SqlDataSource1"
+            DataKeyNames="id" EmptyDataText="There are no data records to display." AllowPaging="True" AllowSorting="True" CellPadding="4" AutoGenerateColumns="False" Width="500px" BackColor="Black" BorderStyle="Solid" BorderWidth="1px" CellSpacing="2" HorizontalAlign="Left">
+
+            <Columns>
+                <asp:BoundField DataField="ItemName" HeaderText="Item Name" SortExpression="ItemName" />
+                <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+				<asp:BoundField DataField="Rating" HeaderText="Rating" SortExpression="Rating" />
+				<asp:HyperLinkField DataNavigateUrlFields="CartButton" DataTextField="CartButton" HeaderText="CartButton" SortExpression="CartButton"/>	
+            </Columns>
+
+            <RowStyle BackColor="#333333" ForeColor="#FFFFFF" />
+            <FooterStyle BackColor="#000000" Font-Bold="True" ForeColor="Black" />
+            <PagerStyle BackColor="#FFFFFF" ForeColor="White" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#FFFFFF" Font-Bold="True" ForeColor="#FFFFFF" />
+            <HeaderStyle BackColor="#000000" Font-Bold="True" ForeColor="#dfca05" />
+            <AlternatingRowStyle BackColor="#333333" ForeColor="White" />
+        </asp:GridView>
+</div>
+</div>
+</form>
+</body>
+</html>

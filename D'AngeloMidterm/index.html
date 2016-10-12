@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="Style/style.css">
+<meta charset="utf-8">
+<title>Stopwatch</title>
+<script src="JS/jquery-1.7.2.min.js"></script>
+<script>
+
+var timeout;
+var seconds = 50;
+var minutes = 0;
+var hours = 0;
+var zSec = "0";
+var zMin = "0";
+var zHour = "0";
+var songChange = 0;
+
+
+function Stop(){
+    clearTimeout(timeout)
+	document.getElementById("Start").style.opacity = '1';
+	document.getElementById("Stop").style.opacity = '.5';
+	document.getElementById("Reset").style.opacity = '1';	
+}
+
+function timer() {
+	document.getElementById("htext").value = zHour + hours + ":" + zMin + minutes + ":" + zSec + seconds;
+	document.getElementById("Start").style.opacity = '.5';
+	document.getElementById("Stop").style.opacity = '1'
+	document.getElementById("Reset").style.opacity = '1'
+	
+	
+	seconds = seconds + 1;
+	timeout = setTimeout(function(){timer()}, 1000);
+	if (seconds >= 10)
+	{
+		zSec="";
+	}
+	else {
+	zSec = "0";	
+	}
+	
+	
+	if (seconds >= 60){
+		seconds = 0;
+		zSec = "0";
+		minutes++;
+		songChange();
+	}
+	if (minutes >= 10)
+	{
+		zMin="";
+	}
+	else {
+	zMin = "0";	
+	}
+
+	if (minutes >= 60)
+{
+	minutes = 0;
+	zMin = "0";
+	hours++;
+}
+	if (hours >= 10)
+	{
+		zHour="";
+	}
+	else {
+	zHour = "0";	
+	}
+	if (minutes >= 1)
+	{
+		$('#Image1').fadeOut(1500);
+	}
+		if (minutes > 0)
+	{
+		document.getElementById("htext").style.backgroundColor = 'red';
+		document.getElementById("Start").style.backgroundColor = 'red';
+		document.getElementById("Stop").style.backgroundColor = 'red';
+		document.getElementById("Reset").style.backgroundColor = 'red';
+		$('#htext').animate({top:'250px'},2000 );
+		$('#Start').animate({top:'90px'},2000);
+		$('#Stop').animate({top:'90px'},2000);
+		$('#Reset').animate({top:'90px'},2000);
+
+		
+	}
+	
+
+
+function songChange()
+	{
+		document.getElementById("bgroundMusic").src="Music/Destiny OST- Music of the Spheres- The Union [Battle Version].mp3";
+	}
+
+}
+
+function Reset(){
+	if (document.getElementById("htext").style.backgroundColor == 'red'){
+	$('#htext').animate({top:'-1px'},2000 );
+	$('#Start').animate({top:'-1px'},2000);
+	$('#Stop').animate({top:'-1px'},2000);
+	$('#Reset').animate({top:'-1px'},2000);
+	$('#Image1').fadeIn(1000);
+	document.getElementById("htext").style.opacity = '1';
+	document.getElementById("Start").style.opacity = '1';
+	document.getElementById("Stop").style.opacity = '1';
+	document.getElementById("Reset").style.opacity = '1';
+	document.getElementById("htext").style.backgroundColor = '#11253D';
+	document.getElementById("Start").style.backgroundColor = '#11253D';
+	document.getElementById("Stop").style.backgroundColor = '#11253D';
+	document.getElementById("Reset").style.backgroundColor = '#11253D';
+	seconds = 0;
+	minutes = 0;
+	hours = 0;
+	zSec = "0";
+	zMin = "0";
+	zHour = "0";
+	htext.value = zHour + hours + ":" + zMin + minutes + ":" + zSec + seconds;
+	document.getElementById("bgroundMusic").src="Music/Destiny Soundtrack Main Theme.mp3";
+	
+	
+	}
+	else {
+	seconds = 0;
+	minutes = 0;
+	hours = 0;
+	zSec = "0";
+	zMin = "0";
+	zHour = "0"
+	htext.value = zHour + hours + ":" + zMin + minutes + ":" + zSec + seconds;
+	document.getElementById("bgroundMusic").src="Music/Destiny Soundtrack Main Theme.mp3";
+	
+	
+	}
+	
+	
+	
+	
+	
+}
+$(window).load(function() {
+
+	$('#htext').hide().fadeIn(3000);
+	$('#Start').hide().fadeIn(3000);
+	$('#Stop').hide().fadeIn(3000);
+	$('#Reset').hide().fadeIn(3000);
+	
+	
+});
+
+</script>
+
+</head>
+
+<body style="background-color:black">
+
+<img id="Image1" src="Images/destiny.jpg">
+<img id="Image2" src="Images/destiny2.jpg">
+<center>
+<div id="wrapper">
+
+</center>
+<div id="buttonsAndTextfield">
+<center>
+
+<input type="text class="htext" id="htext" value="00:00:00" align="middle" readonly ><br clear="left"/>
+<input type="button" id="Start" value="Start" onClick="timer()"  height="500" width="500">
+<input type="button" id="Stop" value="Stop" onClick="Stop()" height="500" width="500">
+<input type="button" id="Reset" value="Reset" onClick="Reset()" height="500" width="500">
+</center>
+<audio id="bgroundMusic" autoplay="true" controls="" src="Music/Destiny Soundtrack Main Theme.mp3">
+
+</audio
+></div>
+
+
+</div>
+</body>
+</html>

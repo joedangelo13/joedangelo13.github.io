@@ -1,0 +1,606 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Death League</title>
+<!--<link href="styles.css" rel="stylesheet" type="text/css">-->
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- This following line is needed in case of using the default easing option or when using another
+ one rather than "linear" or "swing". You can also add the full jQuery UI instead of this file if you prefer -->
+<script src="vendors/jquery.easings.min.js"></script>   
+
+
+<!-- This following line needed in the case of setting the plugin option `scrollOverflow` to `true` -->
+<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        verticalCentered: true,
+        resize : true,
+        slidesColor : [],
+        anchors:[],
+        scrollingSpeed: 700,
+        easing: 'easeInQuart',
+        menu: false,
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['thePage'],
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        autoScrolling: true,
+        scrollOverflow: false,
+        css3: false,
+        paddingTop: 0,
+        paddingBottom: 0,
+        fixedElements: null,
+        normalScrollElements: null,
+        keyboardScrolling: true,
+        touchSensitivity: 5,
+        continuousVertical: false,
+        animateAnchor: true,
+
+        //events
+		onLeave: function(index){
+			if(index >=1)
+			{
+			var click = document.getElementById("click");
+			click.play();
+			}
+			$(".navHover" + (index-1)).css("opacity","0");
+		},
+		
+
+		
+      afterLoad: function(anchorLink,index){
+		  
+		  
+		  
+		  	if (index != 1)
+			{
+				$("#logo").css("visibility","visible");
+			}
+			
+			if(index == 1)
+			{
+				$("#logo").css("visibility","hidden");
+
+			
+			}
+			
+			$(".navHover" + (index-1)).css("opacity","1");
+			if(index==2)
+			{
+				
+					
+					$('.navImg1').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==3)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==4)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+					
+					$('#readyToMove').attr('id', 'moveLogo');
+			}
+			else if(index==5)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==6)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==7)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==8)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==9)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==10)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==11)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+			}
+			else if(index==12)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+					
+					$('#FadeAway1').attr('id', 'FadeAway5');
+                    $('#FadeAway2').attr('id', 'FadeAway6');
+                    $('#FadeAway3').attr('id', 'FadeAway7');
+                    $('#FadeAway4').attr('id', 'FadeAway8');
+			}
+			else if(index==13)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/Nav Button Currentt.png');
+					$('.navImg13').attr('src','imgs/NavButton.png');
+					
+			}
+			else if(index==14)
+			{
+					$('.navImg1').attr('src','imgs/NavButton.png');
+					$('.navImg2').attr('src','imgs/NavButton.png');
+					$('.navImg3').attr('src','imgs/NavButton.png');
+					$('.navImg4').attr('src','imgs/NavButton.png');
+					$('.navImg5').attr('src','imgs/NavButton.png');
+					$('.navImg6').attr('src','imgs/NavButton.png');
+					$('.navImg7').attr('src','imgs/NavButton.png');
+					$('.navImg8').attr('src','imgs/NavButton.png');
+					$('.navImg9').attr('src','imgs/NavButton.png');
+					$('.navImg10').attr('src','imgs/NavButton.png');
+					$('.navImg11').attr('src','imgs/NavButton.png');
+					$('.navImg12').attr('src','imgs/NavButton.png');
+					$('.navImg13').attr('src','imgs/Nav Button Currentt.png');
+					$(".navImg14").css("opacity",".5");
+					
+					
+			}
+			
+			
+			
+		}
+		
+		
+
+    });
+	
+});
+</script>
+
+<script type="text/javascript">
+    function setVolume()
+    {
+       mySound=document.getElementByClassName(".projectorBackground");
+        mySound.volume=0.1;
+    }
+    window.onload=setVolume;
+    </script>
+
+</head>
+
+<body> 
+<div id="superContainer">
+
+<div id="grainy">
+<img src="imgs/grain_Larger.png">
+</div>
+
+<div id="scope">
+<img src="imgs/filter-scope.png">
+</div>
+<audio src="imgs/Sequence 01_1.mp3" id="click"></audio>
+
+	<div id="logo">
+    <img src="imgs/DLLogoNotHover.png" id="logoNotHover">
+    <img src="imgs/DLLogo.png" id="logoHover">
+    </div>
+
+    <div id="nav">
+        <ul>
+           <li class="navLi1"><a href="#" onClick="$.fn.fullpage.moveTo(2);"><img src="imgs/NavButton.png" class="navImg1"></a><span class="navHover1">Introduction</span></li>
+            <li class="navLi2"><a href="#" onClick="$.fn.fullpage.moveTo(3);"><img src="imgs/NavButton.png" class="navImg2"></a><span class="navHover2">Establishment</span></li>
+            <li class="navLi3"><a href="#" onClick="$.fn.fullpage.moveTo(4);"><img src="imgs/NavButton.png" class="navImg3"></a><span class="navHover3">Perfect Class</span></li>
+            <li class="navLi4"><a href="#" onClick="$.fn.fullpage.moveTo(5);"><img src="imgs/NavButton.png" class="navImg4"></a><span class="navHover4">Chain of Command</span></li>
+            <li class="navLi5"><a href="#" onClick="$.fn.fullpage.moveTo(6);"><img src="imgs/NavButton.png" class="navImg5"></a><span class="navHover5">Pranksters</span></li>
+            <li class="navLi6"><a href="#" onClick="$.fn.fullpage.moveTo(7);"><img src="imgs/NavButton.png" class="navImg6"></a><span class="navHover6">Oliver P. Butterwick</span></li>
+            <li class="navLi7"><a href="#" onClick="$.fn.fullpage.moveTo(8);"><img src="imgs/NavButton.png" class="navImg7"></a><span class="navHover7">Too Far</span></li>
+            <li class="navLi8"><a href="#" onClick="$.fn.fullpage.moveTo(9);"><img src="imgs/NavButton.png" class="navImg8"></a><span class="navHover8">President Keister</span></li>
+            <li class="navLi9"><a href="#" onClick="$.fn.fullpage.moveTo(10);"><img src="imgs/NavButton.png" class="navImg9"></a><span class="navHover9">Final Baptism</span></li>
+            <li class="navLi10"><a href="#" onClick="$.fn.fullpage.moveTo(11);"><img src="imgs/NavButton.png" class="navImg10"></a><span class="navHover10">The Fall</span></li>
+            <li class="navLi11"><a href="#" onClick="$.fn.fullpage.moveTo(12);"><img src="imgs/NavButton.png" class="navImg11"></a><span class="navHover11">The End</span></li>
+            <li class="navLi12"><a href="#" onClick="$.fn.fullpage.moveTo(13);"><img src="imgs/NavButton.png" class="navImg12"></a><span class="navHover12">Facts</span></li>
+            <li class="navLi13"><a href="#" onClick="$.fn.fullpage.moveTo(14);"><img src="imgs/NavButton.png" class="navImg13"></a><span class="navHover13">Authors</span></li>
+            <li><a href="#" onClick="$.fn.fullpage.moveSectionDown();"><img src="imgs/Down Arrow.png" class="navImg14"></a></li>
+
+
+        </ul>
+        
+	 </div> 
+     
+     	<!--Splash-->
+        <div class="section"><img src="imgs/Splash Page.png" class="backgroundImg" /></div>
+       
+        <!--collage section 2-->
+        <div class="section"><img src="imgs/DeathLeagueCollage.png" class="backgroundImg" />
+                    <div id="hookText">
+                <p>In 1866, the same year that Lebanon Valley College was founded, a secret society was born that would go down in infamy as a destructive group of students that loved to pull pranks.  
+                
+                <br><br>
+        However, one night they took it too far, and became nothing more than a suppressed memory of LVC's history.
+ </p>
+                </div>
+        </div>
+        
+        
+        <div class="section" data-anchor="slide1" >
+        	<h1 class="title" align="center">Establishment</h1>
+            <img src="imgs/staffpicture1900.PNG" id="staffPic">
+            <div id="staffText">
+            <p>The League of Death is deeply rooted within the history of LVC, since it was founded the very same year as the college itself. The League was founded by a group of faculty members with a common belief that they could keep the students in line.
+            
+</p>
+            </div>
+        </div>
+        
+   
+        <div class="section" data-anchor="slide2">
+        <h1 class="title" align="center">Perfect Class</h1>
+        	<img src="imgs/1905theperfectlcass.PNG" id="perfectClass">
+            <img src="imgs/DLLogo.png" id="readyToMove">
+            <div id="passOffText">
+            <p>
+           After a certain point, The League of Death became too much for the faculty to handle, and in 1902 was passed down to a group of reliable students, often referred to a "The Perfect Class." This is when it truely became The League of Death. 
+           </p>
+            </div>
+ 		</div>
+        
+
+        <div class="section" data-anchor="slide3">
+           <h1 class="title" align="center">Chain Of Command</h1>
+            <img src="imgs/Capture15.PNG" id="ranksPic1">
+            <img src="imgs/Capture3.PNG" id="ranksPic2">
+            <div id="ranksText">
+            <p>As the League of Death started to grow, it became more fraternity like in nature, and developed a strict chain of command, which included:
+            <br><br>
+<span style="text-decoration:underline">High-Cock-A-Lorum:</span> The “president” or “figurehead” of the group. This position is the highest of the group and is also the leader.<br>
+<span style="text-decoration:underline">Big Devil:</span> The High-cock-a-lorum’s right hand man. He was second in command and was usually a junior ready to take role as the High-cock-a-lorum during his senior year. <br>
+<span style="text-decoration:underline">Little Devil:</span> Is the understudy for the Big Devil. He was usually a sophomore that has been taken under the wing of the Big Devil.<br>
+<span style="text-decoration:underline">Paddler:</span> In charge of the nightly servings of “forty-fives,” or paddlings. He could be either a junior or senior. 
+</p>
+            </div>
+  		</div>
+        
+       	
+        <div class="section" data-anchor="slide4">
+        <h1 class="title" align="center" style="margin-top:-3%;">Pranksters</h1>
+        <img src="imgs/Capture7.PNG" id="Pranksters">
+        <div id="PrankstersText">
+        	<p>The beliefs of the members became altered over the years, and The League of Death evolved from student police to student deviants. The students started pulling small pranks on other students and faculty members, like removing all the doorknobs and messing with the school's outhouses. However, as the years went on, the pranks became more and more harsh. 
+            </p>
+       </div>
+       </div>
+       
+       <div class="section" data-anchor="slide5">
+       <h1 class="title" align="center" style="margin-top:-3%;">Oliver P. Butterwick</h1>
+       <img src="imgs/capture22.PNG" id="Oliver">
+       <div id="OliverText">
+       <img src="imgs/ollie.jpg" id="OliverSmallPic" align="right">
+       <p>In  1909, an innocent freshman arrived at LVC with ambition and charm. He was quickly noticed by The League of Death, and was inducted in to The League that very same year. His induction included being pattled over a tombstone and forced to recite hymns. By day, Oliver was known for his charming personality and influence among his peers. By night however, Oliver was known for his crazy pranks that were ofter over the top, which earned him a reputation as the most famous member of The League. During his time at Lebanon Valley College, Ollie worked his way up the ranks of the society, until he received the position of High-Cock-A-Lorum during his senior year in 1912.  
+       
+       
+</p>
+        	</div>
+       </div>
+      
+       <div class="section" data-anchor="slide6">
+       <h1 class="title" align="center" style="margin-top:1%;">Too Far</h1>
+		<img src="imgs/prank1.jpg" id="Prank1">
+        <img src="imgs/prank2.jpg" id="Prank2">
+
+       <div id="PranksText">
+        <p>Under Ollie's leadership, The League became more dangerous than it had ever been. While Ollie may have been amused by the pranks he was pulling, they were often destructive to people and property of Lebanon Valley College. 
+        
+        One of Ollie's most infamous pranks was when he got The League of Death to steal live chickens from a professor's farm, only to feed them to that very professor the next day at a student faculty dinner. 
+        
+        
+        </p>	
+       </div>
+       </div>
+       <div class="section" data-anchor="slide7">
+       <h1 class="title" align="center" style="margin-top:-3%;">President Keister</h1>
+       
+       <img src="imgs/capture40.PNG" id="Keister">
+       <div id="KeisterText">
+        	<p>The Rev. Dr. Lawrence Keister was hired as the ninth president in 1907. At the time he was hired the college was struggling financially. He helped bring stability back to the college and began renovating the buildings and added 1,000 feet of walkways to the campus. He was known as a stern man and wanted only the best for the college. He began implementing rules around campus, one of which was the immediate termination of The Death League.
+</p>
+       </div>
+       </div>
+       
+       <div class="section" data-anchor="slide8">
+       <h1 class="title" align="center">Final Baptism</h1>
+       <img src="imgs/office.jpg" id="DistOf18th" align="left">
+       <div id="DistOf18thText">
+        	<p>When members of the not so secret society heard about Keister's plan to get rid of The League of Death once and for all, tesnsions became high, and everyone looked to their leader for guidence. Oliver P. Butterwick began plotting his most famous, and ultimatly tragic prank to date, known simply as "The Final Baptism."
+
+They had one objective: get rid of President Keister.
+
+After a night of planning they came to a simple conclusion: Blow the Presidents office up with dynamite.
+
+On the fateful day of January 18th 1911 students gathered in the room of Oliver Butterwick to begin their attack. The Death League called this day, “The Final Baptism.”  All of a sudden President Keister appeared at the door of the men’s dormitory and called a meeting with every alleged member of The League. President Keister caught wind of The Death League’s sinister plot and began expelling students for their involvement. Oliver P. Butterwick pleaded that he had no idea about the plot to blow the office up and charmed the President into letting him stay for his final semester on campus. In their meeting together President Keister told Ollie that “The college would have been a better place if he never attended.”
+</p>
+       </div>
+       </div>
+       <div class="section" data-anchor="slide9">
+       <h1 class="title" align="center" >The Fall</h1>
+       <img src="imgs/capture22.PNG" id="Banishment" align="left">
+       <div id="BanishmentText"</div>
+        	<p>President Keister then set into motion his final judgement of banning The Death League from the campus.  The only member left at the college to state in their yearbook that they had any involvement in The Death League was Oliver P. Butterwick. 
+
+During that last semester a missionary came to the college from China and captivated the students with stories of traveling the other side of the world. Ollie was among those who felt empowered by the missionary to spread the word of God, and left for China as soon as he graduated. When Ollie left LVC, so did the heart and soul of The League of Death. Over the next few years, a couple of students tried to revive the dead society, but failed to do so.   
+</p>
+       </div>
+       </div>
+       <div class="section" data-anchor="slide10">
+       <h1 class="title" align="center">The End</h1>
+       <img src="imgs/Fader1.png" id="FadeAway1">
+       <img src="imgs/Fader2.png" id="FadeAway2">
+       <img src="imgs/Fader3.png" id="FadeAway3">
+       <img src="imgs/Fader4.png" id="FadeAway4">
+       <div id="DimminishmentText">
+       
+        	<p>As the former members of The League began to fade from memory, so did the deviant beliefs that were responsible for turning student police in to student criminals. 
+            
+         </p>
+       </div>
+       </div>
+        
+        <div class="section" data-anchor="slide11">
+        <h1  align="center" style="z-index:700; position:absolute; margin-left:8%;">Facts</h1>
+            <div class="imgHolder">
+            
+                <div class="FindOutMore">
+                <img src="imgs/Capture3.PNG">   
+                <p class="findOutMoreText">The “Big Devil” is on the left while the “Little Devil” is on the right. These two personally gave the victims their dues. The lantern on the desk shows that these scene is taking place at night. 
+
+</p>
+                 </div>
+                 
+                <div class="FindOutMore">
+                <img src="imgs/Capture2.PNG"> 
+                <p class="findOutMoreText">This entry can be found in the 1903 yearbook as one of the first public documents of the hierarchy of the group, its victims for the year, and a lengthy description of the organization. Note that the faculty were its charter members, but needed to pass the group into the hands of the student body. </p>
+                </div>
+                
+                <div class="FindOutMore"><img src="imgs/Capture4.PNG">   
+                <p class="findOutMoreText">A short poem written by a student showing the pleasures of living at Lebanon Valley College. The unknown author writes, “Because the League of Death preserves such good order.” It shows that some students feared The League while others embraced their presence.</p> 
+                 </div>
+                 
+                 
+                <div class="FindOutMore"><img src="imgs/Capture6.PNG">   
+                <p class="findOutMoreText">“Silence has many advantages.” This is the motto for the senior gentlemen that were involved with the death league.</p>
+                 </div>
+                 
+                <div class="FindOutMore"><img src="imgs/Capture7.PNG">  
+                 <p class="findOutMoreText">A fantastic illustration found in another yearbook illustrating the types of treatments that were imposed on the freshmen of that year. The college is in the distance over the hills which means this is the same cemetery along route 934</p>
+                </div>
+                
+                <div class="FindOutMore"><img src="imgs/Capture15.PNG">  
+                 <p class="findOutMoreText">A unique entry shows that the location of the meeting place for the gentlemen of The Death League has changed from the cemetery to Brightbill’s Gymnasium. This shows that the faculty still supported those that were in The League.</p>
+                </div>
+                
+                <div class="FindOutMore"><img src="imgs/capture21.PNG"> 
+                 <p class="findOutMoreText">A very creative poem written by a member of The Death League. The uppercase letters at the end of almost every sentence are actually the initials of the men that were in The Death League for that year.</p>
+                 </div>
+                 
+                <div class="FindOutMore"><img src="imgs/capture22.PNG">  
+                 <p class="findOutMoreText">The League has moved back to the cemetery at this mine and still meeting at night. Note that D.E Weidler is not president and his initials were mentioned in the previous poem.</p>
+                </div>
+                
+                <div class="FindOutMore"><img src="imgs/capture40.PNG">  
+                 <p class="findOutMoreText">The resolutions that President Keister wrote when he was inducted into office as Lebanon Valley College’s 9th president. He was a very strict man that wanted to bring back stability to the school.  </p>
+                 </div> 
+        
+        </div><!--close imgHolder-->
+	</div><!--close section-->
+    <div class="section" data-anchor="slide12">
+    <div class="AboutTheAuthorsContainer">
+    <h1 id="AboutTheAuthorsh1" align="center"> About The Authors  </h1>
+    <div class="Nick">
+    <img src="imgs/nick1.jpg">
+    <p>Nicholas Bechtold</p>
+    <p><span style="font-style:italic">High-cock-a-lorum</span></p>
+    <p>Lebanon Valley College</p>
+    <p>Major: Digital Communications</p>
+    <p>Minor: Computer Science</p>
+    <p>From: Lebanon, Pennsylvania</p>
+    <p>Email: neb001@lvc.edu</p>
+    <p>Phone: 717-383-2791</p>
+    <p>Programming Languages: JavaScript, Java, C++, HTML5, PHP, SQL</p>
+    </div> 
+    <div class="Zane">
+    <img src="imgs/player_Brown.jpg">
+    <p>Zane Brown</p>
+    <p><span style="font-style:italic">Paddler</span></p>
+    <p>Lebanon Valley College</p>
+    <p>Major: Digital Communications</p>
+    <p>Concentration: User Experience</p>
+    <p>From: Silver Spring, Maryland</p>
+    <p>Email: zmb001@lvc.edu</p>
+    <p>Phone: 301-641-8129</p>
+    <p>Design Tools: Adobe Photoshop, Adobe Illustrator, Adobe Indesign, Adobe Premiere</p>
+    </div>
+    <div class="Joe">
+    <img src="imgs/Suit.jpg">
+    <p>Joseph J. D'Angelo</p>
+    <p><span style="font-style:italic">Little Devil</span></p>
+    <p>Lebanon Valley College</p>
+    <p>Major: Digital Communications</p>
+    <p>Concentration: Programming</p>
+       <p>From: Frackville, Pennsylvania</p>
+    <p>Email: jd004@lvc.edu</p>
+    <p>Phone: 570-933-9085</p>
+    <p>Programming Languages: Java, JavaScript, C++, HTML5</p>
+    
+    </div>
+    <div class="Damian">
+    <img src="imgs/ddog.jpg">
+    <p>Damian Grosso</p>
+    <p><span style="font-style:italic">Big Devil</span></p>
+    <p>Lebanon Valley College</p>
+    <p>Major: Digital Communications</p>
+    <p>Concentration: User Experience</p>
+       <p>From: Aston, Pennsylvania</p>
+    <p>Email: djg006@lvc.edu</p>
+    <p>Designers Toolbox: Adobe Creative Suite, User Experience Design, & Experience Design</p>
+    
+    </div>
+
+    
+    </div>
+    </div>
+
+</div>
+</body>
+</html>

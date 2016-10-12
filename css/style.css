@@ -1,0 +1,1367 @@
+﻿@font-face {
+   font-family: "GothamNarrow-Medium";
+   src: url(../fonts/GothamNarrow-Medium.ttf) format("truetype");
+} 
+@font-face {
+   font-family: "GothamNarrow-Light";
+   src: url(../fonts/GothamNarrow-Light.ttf) format("truetype");
+}
+@font-face {
+   font-family: "GothamNarrow-Book";
+   src: url(../fonts/GothamNarrow-Book.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body
+{
+     font-family: "GothamNarrow-Book";
+
+}
+
+
+#header
+{
+    width:100%;
+    height:54px;
+    background-color:#323232;
+    position:fixed;
+    font-family: "GothamNarrow-Light";
+}
+#nav
+{
+    width:auto;
+    color:#FFFFFF;
+    font-size:18px;
+  
+}
+#nav ul
+{
+    display:inline-block;
+    margin-top:15px;
+}
+#nav li
+{
+    display:inline;
+    padding:20px;   
+}
+#nav a
+{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+#nav a:hover
+{
+    color:#828282;
+}
+#HomeButton
+{
+    width:30.35px;
+    height:20px;
+    cursor:pointer;
+}
+
+
+#Part1
+{
+    width:100%;
+    height:100%;
+} 
+#Intro
+{
+    width:100%;
+    height:100%; 
+    background-image: url("../Images/Logo2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.SectionTitle
+{
+    font-family: "GothamNarrow-Book";
+    color:#323232;
+    margin-left:2%;
+    padding-bottom:0px;
+}
+
+.project
+{
+    font-family: "GothamNarrow-Light";
+    padding-bottom:2%;
+
+}
+
+.skillsused
+{
+    font-size:24px;
+    padding-top:18px;
+    margin-left:4%;   
+}
+.projecthr
+{
+    clear:both;
+    width:75%;
+}
+.rightdesc
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+.rightimage
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:8%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888; 
+}
+
+.leftimage
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:8%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+.leftdesc
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:6%;
+}
+
+#Programming
+{
+    width:100%;
+    height:auto;
+    padding-top:72px;
+    color:#323232;
+}
+#Programming a
+{
+    color:#323232;
+}
+
+    
+#MyLVC
+{
+    width:100%;
+    height:auto;   
+}
+#MyLVCFeedback
+{
+    width:100%;
+    height:auto;   
+}
+#Game
+{
+    width:100%;
+    height:auto;   
+}
+
+/*
+#MyLVCDescription
+{
+    width:30%;   
+    float:right;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:6%;
+}
+#MyLVCIMG
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:10%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+#FeedbackDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:6%;
+}
+#MyLVCFeedbackIMG
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:10%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+*/
+#GameDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:6%;
+}
+#GameImage
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:8%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+/*
+#DeathLeagueDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+#DeathLeagueImage
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:10%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+*/
+#Poem
+{
+    width:100%;
+    height:auto;
+    clear:right;
+    
+    
+}
+#PoemDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:12%;
+}
+#PoemImage
+{
+    width:25%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+
+}
+
+#Poster
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#PosterDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:13%;
+    
+}
+
+#PosterImage
+{
+    width:25%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+#Door
+{
+    width:100%;
+    height:auto;
+    padding-top:36px;
+    
+}
+#DoorDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:10%;
+}
+#DoorImage
+{
+    width:17.5%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0px;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+}
+#Wine
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#WineDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:10%;
+    
+}
+
+#WineImage
+{
+    width:30%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    clear:left;
+}
+
+#Design
+{
+    width:100%;
+    height:auto;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#UX
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#BusinessTechnology
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#footer
+{
+    width:100%;
+    color:#FFFFFF;
+    background-color:#323232;
+   
+}
+#socialmedia
+{
+    padding:20px;
+    margin-left:414px;
+}
+.social
+{
+    list-style:none;
+    text-decoration:none;
+    color:#FFFFFF;
+    display:block;
+}
+.socialimage
+{
+    width:30px;
+    height:auto;
+    padding-right:5px;
+    padding-top:5px;
+}
+#socialtitle
+{
+    margin-left:6px;
+}
+
+@media all and (max-width:320px){
+
+}
+
+
+@media all and (max-width:375px){
+
+}
+
+
+@media all and (max-width:414px){
+
+}
+
+
+@media all and (max-width:480px){
+
+}
+
+@media all and (max-width:540px){
+
+}
+
+
+@media all and (max-width:667px){
+
+}
+
+@media all and (max-width:768px){
+
+}
+
+@media all and (max-width:790px){
+    #NavProgramming{
+        display:none;
+    }
+    #NavDesign{
+        display:none;
+    }
+    #NavUX{
+        display:none;
+    }
+    #NavBusinessTechnology{
+        display:none;
+    }
+    #NavContact{
+        display:none;
+    }
+}
+
+
+
+
+@media all and (max-width:1024px){
+#MyLVC
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#MyLVCDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:6%;
+}
+#MyLVCIMG
+{
+    width:45%;
+    height:auto;
+    margin-right:7%;
+    margin-top:11%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+#MyLVCFeedback
+{
+    width:100%;
+    height:auto;
+    
+   
+}
+#FeedbackDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+#MyLVCFeedbackIMG
+{
+    width:45%;
+    height:auto;
+    margin-left:7%;
+    margin-top:13%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Game
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#GameDescription
+{
+    width:40%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:6%;
+}
+#GameImage
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:12%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+
+#DeathLeagueDescription
+{
+    width:40%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+#DeathLeagueImage
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:10%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Poem
+{
+    width:100%;
+    height:auto;
+    clear:right;
+    
+    
+}
+#PoemDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:12%;
+}
+#PoemImage
+{
+    width:30%;
+    height:auto;
+    margin-right:10%;
+    margin-top:2%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+
+}
+
+#Poster
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#PosterDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:11%;
+    
+}
+
+#PosterImage
+{
+    width:30%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+#Door
+{
+    width:100%;
+    height:auto;
+    padding-top:36px;
+    
+}
+#DoorDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:36px;
+    padding-bottom:17%;
+}
+#DoorImage
+{
+    width:25%;
+    height:auto;
+    margin-right:10%;
+    margin-top:2%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+}
+#Wine
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#WineDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:10%;
+    
+}
+
+#WineImage
+{
+    width:35%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    clear:left;
+}
+
+#Design
+{
+    width:100%;
+    height:auto;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#UX
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#BusinessTechnology
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#footer
+{
+    width:100%;
+    color:#FFFFFF;
+    background-color:#323232;
+   
+}
+#socialmedia
+{
+    padding:20px;
+    margin-left:414px;
+}
+.social
+{
+    list-style:none;
+    text-decoration:none;
+    color:#FFFFFF;
+    display:block;
+}
+.socialimage
+{
+    width:30px;
+    height:auto;
+    padding-right:5px;
+    padding-top:5px;
+}
+#socialtitle
+{
+    margin-left:6px;
+}
+
+}
+
+
+
+
+
+@media all and (min-width:1441px){
+#MyLVC
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#MyLVCDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:6%;
+}
+#MyLVCIMG
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:5%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+#MyLVCFeedback
+{
+    width:100%;
+    height:auto;
+    
+   
+}
+#FeedbackDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+#MyLVCFeedbackIMG
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:5%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Game
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#GameDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:5%;
+    margin-top:72px;
+    padding-bottom:6%;
+}
+#GameImage
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:6%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+
+#DeathLeagueDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:6%;
+    
+}
+
+#DeathLeagueImage
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:2.5%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Poem
+{
+    width:100%;
+    height:auto;
+    clear:right;
+    
+    
+}
+#PoemDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:20%;
+}
+#PoemImage
+{
+    width:25%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+
+}
+
+#Poster
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#PosterDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:24%;
+    
+}
+
+#PosterImage
+{
+    width:25%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+#Door
+{
+    width:100%;
+    height:auto;
+    padding-top:36px;
+    
+}
+#DoorDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:22%;
+}
+#DoorImage
+{
+    width:17.5%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0px;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+}
+#Wine
+{
+    width:100%;
+    height:auto;
+
+    
+   
+}
+#WineDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:10%;
+    
+}
+
+#WineImage
+{
+    width:30%;
+    height:auto;
+    margin-left:7%;
+    margin-top:-40px;
+    float:left;
+    clear:left;
+}
+
+#Design
+{
+    width:100%;
+    height:auto;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#UX
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#BusinessTechnology
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#footer
+{
+    width:100%;
+    color:#FFFFFF;
+    background-color:#323232;
+   
+}
+#socialmedia
+{
+    padding:20px;
+    margin-left:414px;
+}
+.social
+{
+    list-style:none;
+    text-decoration:none;
+    color:#FFFFFF;
+    display:block;
+}
+.socialimage
+{
+    width:30px;
+    height:auto;
+    padding-right:5px;
+    padding-top:5px;
+}
+#socialtitle
+{
+    margin-left:6px;
+}
+
+
+}
+
+@media all and (min-width:2559px){ /*4K Monitor*/
+#MyLVC
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#MyLVCDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:8%;
+}
+#MyLVCIMG
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:2.5%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+#MyLVCFeedback
+{
+    width:100%;
+    height:auto;
+    
+   
+}
+#FeedbackDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:12%;
+    
+}
+
+#MyLVCFeedbackIMG
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:4%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Game
+{
+    width:100%;
+    height:auto;
+    
+    
+}
+#GameDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:5%;
+    margin-top:72px;
+    padding-bottom:9%;
+}
+#GameImage
+{
+    width:40%;
+    height:auto;
+    margin-right:7%;
+    margin-top:6%;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    
+    
+}
+
+#DeathLeagueDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:36px;
+    clear:right;
+    padding-bottom:13%;
+    
+}
+
+#DeathLeagueImage
+{
+    width:40%;
+    height:auto;
+    margin-left:7%;
+    margin-top:2.5%;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+
+#Poem
+{
+    width:100%;
+    height:auto;
+    clear:right;
+    
+    
+}
+#PoemDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:23%;
+}
+#PoemImage
+{
+    width:25%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+
+}
+
+#Poster
+{
+    width:100%;
+    height:auto;
+    margin-top:3%;
+    
+   
+}
+#PosterDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:28%;
+    
+}
+
+#PosterImage
+{
+    width:25%;
+    height:auto;
+    margin-left:7%;
+    margin-top:0px;
+    float:left;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;
+    clear:left;
+}
+#Door
+{
+    width:100%;
+    height:auto;
+    padding-top:36px;
+    
+}
+#DoorDescription
+{
+    width:30%;   
+    float:left;
+    margin-left:10%;
+    margin-top:72px;
+    padding-bottom:29%;
+}
+#DoorImage
+{
+    width:17.5%;
+    height:auto;
+    margin-right:10%;
+    margin-top:0px;
+    float:right;
+    -moz-box-shadow: 1px 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px 1px #888;  
+}
+#Wine
+{
+    width:100%;
+    height:auto;
+
+    
+   
+}
+#WineDescription
+{
+    width:30%;   
+    float:right;
+    margin-right:10%;
+    margin-top:72px;
+    clear:right;
+    padding-bottom:25%;
+    
+}
+
+#WineImage
+{
+    width:30%;
+    height:auto;
+    margin-left:7%;
+    margin-top:-40px;
+    float:left;
+    clear:left;
+}
+
+#Design
+{
+    width:100%;
+    height:auto;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#UX
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#BusinessTechnology
+{
+    width:100%;
+    height:100%;
+    padding-top:72px;
+    clear:left;
+}
+
+
+#footer
+{
+    width:100%;
+    color:#FFFFFF;
+    background-color:#323232;
+   
+}
+#socialmedia
+{
+    padding:20px;
+    margin-left:414px;
+}
+.social
+{
+    list-style:none;
+    text-decoration:none;
+    color:#FFFFFF;
+    display:block;
+}
+.socialimage
+{
+    width:30px;
+    height:auto;
+    padding-right:5px;
+    padding-top:5px;
+}
+#socialtitle
+{
+    margin-left:6px;
+}
+
+
+}
